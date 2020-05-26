@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parking DApp</title>
+ 
+
+ <link href='https://fonts.googleapis.com/css?
+
+family=Open+Sans:400,700,300' rel='stylesheet'
+
+type='text/css'>
+  <script type="text/javascript"
+
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3
+
+/jquery.min.js"></script>
+  <script
+
+src="./app.js"></script>
+  <style>
+table, th, td {
+   
+
+border: 1px solid black;
+}
+/*
+p {
+    float: left;
+   
+}
+*/
+
+</style>
+
+<script type="text/javascript">
+        function show() { document.getElementById('area').style.display = 'block'; }
+        function hide() { document.getElementById('area').style.display = 'none'; }
+      </script>
+     
+</head>
+   
+<body>
+ 
+
+<h1>Parking DApp</h1>
+  <div class="section">
+       
+
+<div class="left">Contract deployed at: <div id="parkAddress"></div></div>
+<div class="right">Parking Balance: <div
+
+id="parkBalance">0</div></div>
+  </div>
+
+<br/> <br/>
+ 
+<div class="section">
+<h2> Owners vs Vehicles </h2>
+<table id="table1" cellpadding = 10>
+ 
+
+<tr>
+    <th>Vehicle Number</th>
+    <th>Vehicle
+
+Owner</th>
+  </tr> 
+</table>
+</div>
+
+<div
+
+class="clear"></div>
+
+<div class="section">
+<h2> Add
+
+Vehicle </h2>
+    Vehicle Number: <input type="text" id="vehicleAddNum" />
+    Vehicle Owner: <input type="text" id="vehicleAddOwner" />
+  
+
+   <button id="vehicleAdd">Add</button>
+      <span id="vehicleAddResult"></span>
+</div>
+<hr/>
+
+<div
+
+class="section">
+<h2> Current Parkings </h2>
+<table id="table2" cellpadding = 10>
+  <tr>
+ 
+
+   <th>In Time</th>   
+    <th>Vehicle Number</th>
+   
+
+<th>Vehicle Owner</th>
+  </tr> 
+</table>
+</div>
+
+<div
+
+class="section">
+<h2> Checkin Vehicle </h2>
+Vehicle Number: <input type="text" id="vehicleCheckInNum" /> 
+Vehicle Owner: <input type="text" id="vehicleCheckInOwner" />
+Checkin Time: <input type="text" id="vehicleCheckInTime" /> 
+<button id="checkIn">Check In</button>
+<span id="checkInResult"></span>
+</div>
+<hr/>
+
+
+
+<div class="section">
+<h2> Checkout Vehicle </h2>
+Vehicle Number: <input type="text" id="vehicleCheckOutNum" />
+Offer Code: <input type="text" id="vehicleOffer" />
+Checkout Time: <input type="text" id="vehicleCheckOutTime" />
+<button id="checkOut">Check Out</button>
+<span id="checkOutResult"></span>
+<br/>
+Amount To Pay: <input type="text" id="checkOutAmount" />
+<form>
+<input type="radio" id="selfish" name="whoPay" value="self" onclick="hide();"  >
+Self
+<input type="radio" id="otherish" name="whoPay" onclick="show();" value="other" checked > 
+Other 
+<TEXTAREA id="area" style="display: none;" NAME="data" ROWS=5 COLS=50 ></TEXTAREA>
+</form>
+<button id="pay">Pay</button>
+<span id="payResult"></span>
+</div>
+
+<div class="section">
+<h2> Parking History </h2>
+<table id="table3" cellpadding = 10>
+  <tr>
+    <th>In Time</th>
+    <th>Out Time</th>   
+    <th>Vehicle Number</th>
+    <th>Offer Code</th>
+    <th>Amount Paid</th>
+    <th>Paid By</th>
+  </tr> 
+</table>
+</div>
+
+<hr/>
+<br/><br/>
+<table cellpadding = 10>
+  <tr>
+    <th>0xc434422fbc30e27af83b6fded068f0e25462117d</th>
+    <th>Owner</th>   
+  </tr> 
+  <tr>
+    <td>0xb14932b2039cd7c912389c35d55fe6085ab4aa74</td>
+    <td>Account 1</td>   
+  </tr> 
+  <tr>
+   
+
+<td>0x5aa4fff0531770c4cd670fe3cca115e3a4db2226</td>
+   
+
+<td>Account 2</td>   
+  </tr> 
+  <tr>
+   
+
+<td>0xc92ac767e756a472449cd36cde869a180e320203</td>
+   
+
+<td>Account 3</td>   
+  </tr> 
+  <tr>
+   
+
+<td>0xf91cf34ee83bc3ccba1f7854c59d306edb0d0737</td>
+   
+
+<td>Account 4</td>   
+  </tr> 
+  <tr>
+   
+
+<td>0x0153205b76071274d9088e89abfd52da8a7d57d0</td>
+   
+
+<td>Account 5</td>   
+  </tr> 
+  <tr>
+   
+
+<td>0x2c34c4baffde92caefe4bf7ba1d450adb8446f3f</td>
+   
+
+<td>Account 6</td>   
+  </tr> 
+  <tr>
+   
+
+<td>0xd2b63c931563d8bba34d3d5976a33ba1d44df86e</td>
+   
+
+<td>Account 7</td>   
+  </tr> 
+  <tr>
+   
+
+<td>0x52698eb1ebf498cd3c510d48e60e4f08de0bb60b</td>
+   
+
+<td>Account 8</td>   
+  </tr> 
+  <tr>
+   
+
+<td>0xf18d19e3bdb1f0559ee56c53f3b9e5091c8a89a2</td>
+   
+
+<td>Account 9</td>   
+  </tr> 
+</table>
+</body>
